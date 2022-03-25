@@ -5,12 +5,14 @@ import os
 from flask import Flask, jsonify, make_response
 from flask_cors import CORS
 from flask_swagger_ui import get_swaggerui_blueprint
-from routes import request_api, separate_route
+from routes import request_api, separate_route, create_user_controller
 
 APP = Flask(__name__)
 
-APP.register_blueprint(request_api.get_blueprint())
-APP.register_blueprint(separate_route.get_blueprint())
+#APP.register_blueprint(request_api.get_blueprint())
+#APP.register_blueprint(separate_route.get_blueprint())
+APP.register_blueprint(create_user_controller.get_blueprint())
+
 
 @APP.errorhandler(400)
 def handle_400_error(_error):
