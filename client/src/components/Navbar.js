@@ -21,6 +21,14 @@ export default function Navbar({ children }) {
         </li>
       }
 
+      {
+        <li className="nav-item">
+          <Link to="/register" className="text-dark nav-link">
+            Register
+          </Link>
+        </li>
+      }
+
       {/* {!isAuth() && (
         <li className="nav-item">
           <Link to="/login" className="text-dark nav-link">

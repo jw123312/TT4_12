@@ -5,7 +5,7 @@ from validate_email import validate_email
 
 from flask import Flask,render_template, request
 
-import MySQLdb
+# import MySQLdb
 '''
 separate_route = Blueprint('separate_route', __name__)
 

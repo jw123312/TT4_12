@@ -11,7 +11,7 @@ from flask import Flask,render_template, request
 # db=_mysql.connect(host="localhost",user="root",
 #                   password="",db="flask")
 
-import MySQLdb
+# import MySQLdb
 # db = MySQLdb.connect(host="localhost",    # your host, usually localhost
 #                      user="root",         # your username
 #                      passwd="",  # your password
