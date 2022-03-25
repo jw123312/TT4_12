@@ -15,9 +15,8 @@ import MySQLdb
 # db = MySQLdb.connect(host="localhost",    # your host, usually localhost
 #                      user="root",         # your username
 #                      passwd="",  # your password
-#                      db="flask")   
-# 
-''' 
+#                      db="flask")      
+'''
 app = Flask(__name__)
  
 # mysql = MySQL(app)
@@ -205,4 +204,4 @@ def delete_record(_id):
     del BOOK_REQUESTS[_id]
 
     return '', 204
-'''  
+'''

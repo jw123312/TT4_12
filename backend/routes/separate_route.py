@@ -6,7 +6,7 @@ from validate_email import validate_email
 from flask import Flask,render_template, request
 
 import MySQLdb
-
+'''
 separate_route = Blueprint('separate_route', __name__)
 
 def get_blueprint():
@@ -49,3 +49,4 @@ def create_record2():
     # db.close()
     # HTTP 201 Created
     return jsonify({"status": True}), 201
+    '''
