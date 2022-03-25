@@ -3,6 +3,14 @@ export const isAuth = () => {
   return sessionStorage.getItem("isLoggedIn") === "true" ? true : false;
 };
 
+//check if user is admin
+
+export const isUserAdmin = () => {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("userRoleisAdmin") == "true" ? true : false;
+  }
+};
+
 //sign out
 export const handleLogout = () => {
   localStorage.clear();
