@@ -56,8 +56,6 @@ def create_record():
     if not data.get('password'):
         abort(400)
     '''
-
-
     cur, db = get_connection()
 
     # Use all the SQL you like
