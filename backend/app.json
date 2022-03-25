@@ -1,0 +1,7 @@
+{
+    "name": "flask-rest-boilerplate",
+    "description": "A barebones Python3 Flask Rest Example",
+    "repository": "",
+    "logo": "",
+    "keywords": ["python", "flask", "rest", "crud", "swagger-ui", "pylint"]
+  }
