@@ -42,20 +42,10 @@ def create_record():
     """
     data = request.get_json(force=True)
     
-    #TODO store in customerDetails
-    # and check that fields are given
-    '''
-    if not request.get_json():
+    #check if all required data are given
+    if len([i for i in ["name", "phone", "address", "balance"] if i not in data.keys()]) != 0:
         abort(400)
-    data = request.get_json(force=True)
 
-    if not data.get('email'):
-        abort(400)
-    if not validate_email(data['email']):
-        abort(400)
-    if not data.get('password'):
-        abort(400)
-    '''
     cur, db = get_connection()
 
     # Use all the SQL you like
