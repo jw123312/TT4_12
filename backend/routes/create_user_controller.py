@@ -7,13 +7,13 @@ from flask import Flask,render_template, request
 
 import MySQLdb
 
-separate_route = Blueprint('separate_route', __name__)
+create_user_controller = Blueprint('create_user_controller', __name__)
 db, cur = None, None
 
 
 def get_blueprint():
     """Return the blueprint for the main app module"""
-    return separate_route
+    return create_user_controller
 
 
 def get_connection():
@@ -29,7 +29,7 @@ def get_connection():
 
     return cur, db
 
-@separate_route.route('/create-user', methods=['POST'])
+@create_user_controller.route('/create-user', methods=['POST'])
 def create_record():
     """Create a book request record
     @param name  
