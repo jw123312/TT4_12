@@ -5,7 +5,9 @@ from validate_email import validate_email
 
 from flask import Flask,render_template, request
 
-import MySQLdb
+# import MySQLdb
+
+from flaskext.mysql import MySQL
 
 create_user_controller = Blueprint('create_user_controller', __name__)
 db, cur = None, None
@@ -21,7 +23,7 @@ def get_connection():
     global cur
 
     if db == None or cur == None:
-        db = MySQLdb.connect(host="localhost",    # your host, usually localhost
+        db = MySQL.connect(host="localhost",    # your host, usually localhost
                         user="dbs",         # your username
                         passwd="password",  # your password
                         db="loan_management")    
